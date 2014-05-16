@@ -1,0 +1,61 @@
+<div class="objednani">
+    <div class="kosik">
+        <div class="hlavicka">
+            <div class="nazev">Název</div>
+            <div class="mnozstvi">Množství</div>
+            <div class="celkem">Celkem</div>
+            <div class="celkem_s_dph">Celkem s DPH</div>
+        </div>
+        <div class="cleaner">&nbsp;</div>
+
+        <div class="polozka" ng-repeat="item in cart.items">
+                <div class="nazev">
+                    <a href="{{item.redirect}}">{{item.name}}</a>
+                </div>
+                <div class="mnozstvi">
+                    <input type="text" size="4" class="number" name="aParameters" value="{{item.quantity}}" ng-model="cart.items[$index].quantity">
+                    <input type="hidden" name="aParameters" value="">
+                </div>
+            <div class="celkem">{{item.amount}}</div>
+            <div class="celkem_s_dph">{{item.amount_vat}}&nbsp;</div>
+            <div class="odstranit">
+                <a href="javascript:void(0)" ng-click="deleteItemCart($index)">
+                    <img alt="Odstranit" title="Odstranit" src="/notia/templates/www_leges_cz/gfx/shared/storno.gif" border="0">
+                </a>
+            </div>
+            <div class="cleaner">&nbsp;</div>
+        </div>
+
+        <div class="cleaner">&nbsp;</div>
+        <div class="oddelovac"><hr></div>
+        <div class="soucet" style="">
+            <div class="nadpis">Celkem:</div>
+            <div class="celkem">{{cart.sum_amount}} Kč</div>
+            <div class="celkem_s_dph">{{cart.sum_amount_vat}} Kč</div>
+        </div>
+        <div class="cleaner">&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div class="cleaner">&nbsp;</div>
+        <div class="akce">
+            <div class="nakupovat">
+                <a href="nakladatelstvi-leges" id="zpet" title="Pokračovat v nákupu">Pokračovat v nákupu</a>
+            </div>
+            <div class="prepocitat" >
+                <a href="javascript:void(0)" id="prepocitat" title="Přepočítat" ng-click="recalculateCart()">Přepočítat</a>
+            </div>
+            <div class="cleaner">&nbsp;</div>
+            <div class="objednat_bez_prihlaseni">
+                <a href="javascript:void(0)" id="objednat_bez_prihlaseni" title="Objednat" ng-click="orderWithoutLoginCart()">Objednat bez přihlášení</a>
+            </div>
+            <div class="objednat_s_prihlasenim">
+                <a href="javascript:void(0)" id="objednat" title="Objednat" ng-click="orderCart()">Objednat</a>
+            </div>
+            <div class="cleaner">&nbsp;</div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="obchodni_podminky">
+            <a target="obchodni_podminky" href="obchodni-podminky">Obchodní podmínky</a>
+        </div>
+    </div>
+</div>

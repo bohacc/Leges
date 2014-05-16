@@ -1,0 +1,265 @@
+<div class="objednani">
+  <div class="rekapitulace">
+    <form name="objednat_ok" method="post" action="podekovani-za-nakup">
+        <div><strong>Košík</strong></div>
+    
+        <div class="cleaner">&nbsp;</div>
+    
+        <div style="float: left; width: 60px; text-align: right; margin-right: 10px;"><strong>Počet</strong></div>
+        <div style="float: left; width: 280px;"><strong>Název</strong></div>
+        <div style="float: left; text-align: right; width: 110px;"><strong>Cena</strong></div>
+        <div style="float: left; text-align: right; width: 110px;"><strong>Cena s DPH</strong></div>
+    
+        <div class="cleaner">&nbsp;</div>
+        <div style="width: 570px;"><hr></div>
+        <div class="cleaner">&nbsp;</div>
+    
+        <div ng-repeat="item in cart.items">
+            <div class="cleaner">&nbsp;</div>
+            <div style="float: left; width: 50px; text-align: right; padding-right: 10px;">{{item.quantity}} ks</div>
+            <div style="float: left; width: 310px;">
+                <a href="{{item.redirect}}">{{item.name}}</a>
+            </div>
+            <div style="float: left; text-align: right; width: 100px;">{{item.amount}}&nbsp;Kč</div>
+            <div style="float: left; text-align: right; width: 100px;">{{item.amount_vat}}&nbsp;Kč</div>
+            <div class="cleaner">&nbsp;</div>
+        </div>
+    
+        <div class="cleaner">&nbsp;</div>
+        <div style="width: 570px;"><hr></div>
+        <div class="cleaner">&nbsp;</div>
+    
+        <div style="float: left; width: 330px; text-align: right; margin-right: 20px;">Celkem za košík:&nbsp;&nbsp;&nbsp;</div>
+        <div style="float: left; text-align: right; width: 100px;"><strong>{{cart.sum_amount}}&nbsp;Kč</strong></div>
+        <div style="float: left; text-align: right; width: 100px;"><strong>{{cart.sum_amount_vat}}&nbsp;Kč</strong></div>
+    
+        <div class="cleaner">&nbsp;</div>
+        <div>&nbsp;</div>
+        <div class="cleaner">&nbsp;</div>
+    
+        <div style="float: left; width: 450px;"><strong>Plátce</strong></div>
+        <div class="cleaner">&nbsp;</div>
+    
+        <fieldset>
+            <legend>Fakturační údaje</legend>
+            <div style="display: block;">
+                <div style="float: left; width: 110px;">Název</div>
+                <div style="float: left;width: 410px;"><strong>{{delivery.company_billing}}</strong></div>
+                <div style="float: left;width: 80px;">&nbsp;</div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 110px;">IČ</div>
+                <div style="float: left;">
+                    <strong>{{delivery.ic}}</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 110px;">DIČ</div>
+                <div style="float: left;">
+                    <strong>{{delivery.dic}}</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 110px;">Jméno&nbsp;a&nbsp;příjmení</div>
+                <div style="float: left; width: 410px;">
+                    <strong>{{delivery.first_name_billing}}&nbsp;{{delivery.last_name_billing}}</strong>
+                </div>
+                <div style="float: left; width: 80px; text-align: right; text-valign: top;">&nbsp;</div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 110px;">Adresa</div>
+                <div style="float: left;">
+                    <strong>{{delivery.street_billing}},&nbsp;{{delivery.city_billing}}&nbsp;{{delivery.zip_billing}}</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 110px;">Telefon</div>
+                <div style="float: left;">
+                    <strong>{{delivery.phone}}</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 110px;">Email</div>
+                <div style="float: left;">
+                    <strong>{{delivery.email}}</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+    
+        </fieldset>
+    
+        <div>&nbsp;</div>
+    
+        <div style="float: left;width: 450px;">
+            <strong>Příjemce</strong>
+        </div>
+        <div class="cleaner">&nbsp;</div>
+    
+        <fieldset>
+            <legend>Kontaktní údaje</legend>
+            <div>
+                <div style="float: left; width: 110px;">Název</div>
+                <div style="float: left; width: 410px;">
+                    <strong>{{delivery.company_delivery}}</strong>
+                </div>
+                <div style="float: left; width: 80px; text-align: right; text-valign: top;">&nbsp;</div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 110px;">Adresát</div>
+                <div style="float: left; width: 410px;">
+                    <strong>{{delivery.}}</strong>
+                </div>
+                <div style="float: left; width: 80px; text-align: right; text-valign: top;">&nbsp;</div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 110px;">
+                    Jméno&nbsp;a&nbsp;příjmení
+                </div>
+                <div style="float: left; width: 410px;">
+                    <strong>{{delivery.first_name_delivery}}&nbsp;{{delivery.last_name_delivery}}</strong>
+                </div>
+                <div style="float: left; width: 80px; text-align: right; text-valign: top;">
+                    &nbsp;
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 110px;">
+                    Adresa
+                </div>
+                <div style="float: left;">
+                    <strong>{{delivery.street_delivery}},&nbsp;{{delivery.city_delivery}}&nbsp;{{delivery.zip_delivery}}</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 110px;">
+                    Telefon
+                </div>
+                <div style="float: left;">
+                    <strong>{{delivery.phone}}</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 110px;">
+                    Email
+                </div>
+                <div style="float: left;">
+                    <strong>{{delivery.email}}</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+        </fieldset>
+        <div class="cleaner">&nbsp;</div>
+        <div>&nbsp;</div>
+    
+        <div class="cleaner">&nbsp;</div>
+        <div>&nbsp;</div>
+    
+        <div><strong>Doprava</strong></div>
+        <fieldset>
+            <legend>Způsob dopravy</legend>
+            <div style="width: 500px; height: 0px;">&nbsp;</div>
+            <div>
+                <div><strong>{{delivery.transport_name}}</strong></div>
+            </div>
+        </fieldset>
+    
+        <div class="cleaner">&nbsp;</div>
+        <div>&nbsp;</div>
+    
+        <div><strong>Platba</strong></div>
+        <fieldset>
+            <legend>Způsob platby</legend>
+            <div>
+                <div><strong>{{delivery.payment_name}}</strong></div>
+                <div style=""><strong></strong></div>
+            </div>
+        </fieldset>
+    
+        <div>&nbsp;</div>
+    
+        <div>
+            <strong>Výsledná cena</strong>
+        </div>
+    
+        <fieldset>
+            <legend>Celkem</legend>
+            <div style="width: 500px; height: 0px;">&nbsp;</div>
+            <div>
+                <div style="float: left; width: 130px;">Zboží&nbsp;celkem:</div>
+                <div style="float: left; width: 280px;">&nbsp;</div>
+                <div style="float: left; text-align: right; width: 130px;">
+                    <strong>{{cart.sum_amount}}&nbsp;Kč</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 130px;">Doprava&nbsp;a&nbsp;platba:</div>
+                <div style="float: left; width: 280px;">&nbsp;</div>
+                <div style="float: left; text-align: right; width: 130px;">
+                    <strong>{{delivery.amount_tp | currency}}</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 130px;">Cena&nbsp;celkem:</div>
+                <div style="float: left; width: 280px;">&nbsp;</div>
+                <div style="float: left; text-align: right; width: 130px;">
+                    <strong>{{cart.sum_amount_tp}}&nbsp;Kč</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <div>
+                <div style="float: left; width: 130px;">Cena&nbsp;celkem&nbsp;s&nbsp;DPH:</div>
+                <div style="float: left; width: 280px;">&nbsp;</div>
+                <div style="float: left; text-align: right; width: 130px;">
+                    <strong>{{cart.sum_amount_vat_tp}}&nbsp;Kč</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+        </fieldset>
+    
+        <div class="cleaner">&nbsp;</div>
+        <div>&nbsp;</div>
+    
+        <fieldset>
+            <legend>Poznámka pro objednání</legend>
+            <div>
+                <textarea name="aParameters" ng-model="delivery.note_order" cols="64" rows="5"></textarea>
+            </div>
+        </fieldset>
+    
+        <div>&nbsp;</div>
+    
+        <fieldset>
+            <legend>Poznámka pro dodání</legend>
+            <div>
+                <textarea name="aParameters" ng-model="delivery.note_delivery" cols="64" rows="5"></textarea>
+            </div>
+        </fieldset>
+    
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+    
+        <div class="akce">
+            <div class="zpet">
+                <a href="javascript:void(0)" id="zpet" title="Zpět" ng-click="goDelivery()">Zpět</a>
+            </div>
+            <div class="pokracovat">
+                <a href="javascript:void(0)" id="objednat" ng-hide="sendingOrder" title="OK" ng-click="order()">Potvrdit objednávku</a>
+                <span ng-show="sendingOrder" style="float: right">Probíhá odeslání objednávky ...</span>
+            </div>
+        </div>
+    </form>
+  </div>
+</div>

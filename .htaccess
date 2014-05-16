@@ -1,0 +1,754 @@
+##  kazdy zaznam musi zacinat ##+mezera+id a koncit ###+mezera+id
+############## RUCNI_ZAZNAMY_PREPINACE  ##############
+## 000000005
+RewriteEngine on     
+### 000000005
+##############  RUCNI_ZAZNAMY ##############
+## 000003602
+RewriteRule cs_ok     /leges-knihy/cs_ok
+### 000003602
+############## RUCNI_ZAZNAMY ##############
+## 000000026
+RewriteRule web_get_img_data?(.*)      /leges-knihy/web_get_img_data?$1 [NC,QSA,L]
+### 000000026
+## 000000601
+RewriteRule xml-export$     /leges-knihy/web_eshop_export_xml_feed
+### 000000601
+## 000000022
+RewriteRule web_css_layout?(.*)     /leges-knihy/web_css_layout?$1
+### 000000022
+## 000000025
+RewriteRule web_redir?(.*)     /leges-knihy/web_redir?$1 [nc,qsa,l]
+### 000000025
+## 000001701
+RewriteRule sitemap$     /leges-knihy/web_eshop_sitemap
+### 000001701
+## 000001702
+RewriteRule web_get_img_data?(.*)     /leges-knihy/web_get_img_data?$1 [NC,QSA,L]
+### 000001702
+## 000001703
+RewriteRule web_download_file?(.*)     /leges-knihy/web_download_file?$1 [NC,QSA,L]
+### 000001703
+## 000001704
+RewriteRule lightbox.css$     /leges-knihy/web_redir?aparameters=akod_r:web_lightbox_text&aparameters=spouzetelo:1&aparameters=akod:css
+### 000001704
+## 000001705
+RewriteRule effects.js$     /leges-knihy/web_redir?aparameters=akod_r:web_lightbox_text&aparameters=spouzetelo:1&aparameters=akod:effects
+### 000001705
+## 000001706
+RewriteRule builder.js$     /leges-knihy/web_redir?aparameters=akod_r:web_lightbox_text&aparameters=spouzetelo:1&aparameters=akod:builder
+### 000001706
+## 000001707
+RewriteRule lightbox.js$     /leges-knihy/web_redir?aparameters=akod_r:web_lightbox_text&aparameters=spouzetelo:1&aparameters=akod:lightbox
+### 000001707
+## 000001708
+RewriteRule scriptaculous.js$     /leges-knihy/web_redir?aparameters=akod_r:web_lightbox_text&aparameters=spouzetelo:1&aparameters=akod:scriptaculous
+### 000001708
+## 000001709
+RewriteRule prototype.js$     /leges-knihy/web_redir?aparameters=akod_r:WEB_LIGHTBOX_TEXT&aparameters=spouzetelo:1&aparameters=akod:PROTOTYPE
+### 000001709
+## 000001710
+RewriteRule bullet.gif$     /leges-knihy/web_print_image?aParameters=aKod:LIGHTBOX_BULLET&aParameters=aPrimoZobrazit:1
+### 000001710
+## 000001711
+RewriteRule close.gif$     /leges-knihy/web_print_image?aParameters=aKod:LIGHTBOX_CLOSE&aParameters=aPrimoZobrazit:1
+### 000001711
+## 000001712
+RewriteRule closelabel.gif$     /leges-knihy/web_print_image?aParameters=aKod:LIGHTBOX_CLOSE_LABEL&aParameters=aPrimoZobrazit:1
+### 000001712
+## 000001713
+RewriteRule download-icon.gif$     /leges-knihy/web_print_image?aParameters=aKod:LIGHTBOX_DOWNLOAD&aParameters=aPrimoZobrazit:1
+### 000001713
+## 000001714
+RewriteRule loading.gif$     /leges-knihy/web_print_image?aParameters=aKod:LIGHTBOX_LOADING&aParameters=aPrimoZobrazit:1
+### 000001714
+## 000001715
+RewriteRule nextlabel.gif$     /leges-knihy/web_print_image?aParameters=aKod:LIGHTBOX_NEXT&aParameters=aPrimoZobrazit:1
+### 000001715
+## 000001716
+RewriteRule prevlabel.gif$     /leges-knihy/web_print_image?aParameters=aKod:LIGHTBOX_PREV&aParameters=aPrimoZobrazit:1
+### 000001716
+## 000001717
+ErrorDocument 400     /errordocs/error_400.html
+### 000001717
+## 000001718
+ErrorDocument 401     /errordocs/error_401.html
+### 000001718
+## 000001719
+ErrorDocument 403     /errordocs/error_403.html
+### 000001719
+## 000001720
+ErrorDocument 404     /errordocs/error_404.html
+### 000001720
+## 000001721
+ErrorDocument 405     /errordocs/error_405.html
+### 000001721
+## 000001722
+ErrorDocument 406     /errordocs/error_406.html
+### 000001722
+## 000001723
+ErrorDocument 408     /errordocs/error_408.html
+### 000001723
+## 000001724
+ErrorDocument 410     /errordocs/error_410.html
+### 000001724
+## 000001725
+ErrorDocument 411     /errordocs/error_411.html
+### 000001725
+## 000001726
+ErrorDocument 412     /errordocs/error_412.html
+### 000001726
+## 000001727
+ErrorDocument 413     /errordocs/error_413.html
+### 000001727
+## 000001728
+ErrorDocument 414     /errordocs/error_414.html
+### 000001728
+## 000001729
+ErrorDocument 415     /errordocs/error_415.html
+### 000001729
+## 000001730
+ErrorDocument 500     /errordocs/error_500.html
+### 000001730
+## 000001731
+ErrorDocument 501     /errordocs/error_501.html
+### 000001731
+## 000001732
+ErrorDocument 502     /errordocs/error_502.html
+### 000001732
+## 000001733
+ErrorDocument 503     /errordocs/error_503.html
+### 000001733
+## 000001734
+ErrorDocument 506     /errordocs/error_506.html
+### 000001734
+## 000003581
+RewriteRule cs_nok     /leges-knihy/cs_nok
+### 000003581
+## 000000024
+RewriteRule rss$     /leges-knihy/web_rss
+### 000000024
+## 000000003
+Redirect 301 /www_leges_cz_start.html     http://www.leges.cz/nakladatelstvi-leges
+### 000000003
+## 000000023
+RewriteRule sitemap$      /leges-knihy/web_eshop_sitemap
+### 000000023
+############## PRODUKTY ##############
+## 000001161
+RewriteRule ^rizeni-ve-vecech-rodinnepravnich$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1841&aparameters=aid_nast:129
+### 000001161
+## 000000981
+RewriteRule ^nemecke-ucetni-pravo-v-ceske-praxi$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1761&aparameters=aid_nast:129
+### 000000981
+## 000001201
+RewriteRule ^zasada-koncentrace-rizeni-a-jeji-uplatneni-v-civilnim-soudnim-rizeni$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1861&aparameters=aid_nast:129
+### 000001201
+## 000000421
+RewriteRule ^kriminologie$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1001&aparameters=aid_nast:129
+### 000000421
+## 000000481
+RewriteRule ^praktikum-z-trestniho-prava-ctvrte$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1041&aparameters=aid_nast:129
+### 000000481
+## 000001242
+RewriteRule ^stojanek-na-knihy-lehatko-modre$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1922&aparameters=aid_nast:129
+### 000001242
+## 000000381
+RewriteRule ^stojanek-na-knihy-maly$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:942&aparameters=aid_nast:129
+### 000000381
+## 000000382
+RewriteRule ^stojanek-na-knihy-velky$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:982&aparameters=aid_nast:129
+### 000000382
+## 000001281
+RewriteRule ^zaklady-prava-evropske-unie-pro-ekonomy-6-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1961&aparameters=aid_nast:129
+### 000001281
+## 000001381
+RewriteRule ^oduvodneni-civilniho-rozsudku$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2141&aparameters=aid_nast:129
+### 000001381
+## 000000621
+RewriteRule ^zakon-o-premenach-obchodnich-spolecnosti-a-druzstev$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1201&aparameters=aid_nast:129
+### 000000621
+## 000001321
+RewriteRule ^vojtech-cepl-zivot-pravnika-ve-20-stoleti$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2061&aparameters=aid_nast:129
+### 000001321
+## 000003321
+RewriteRule ^xxi-karlovarske-pravnicke-dny$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5121&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003321
+## 000000181
+RewriteRule ^prepravni-pravo-v-mezinarodni-kamionove-doprave$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:541&aparameters=aid_nast:129
+### 000000181
+## 000003081
+RewriteRule ^elektronicke-dokumenty-v-pravni-praxi$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4681&aparameters=aid_nast:129
+### 000003081
+## 000001341
+RewriteRule ^zakon-o-premenach-obchodnich-spolecnosti-a-druzstev-2$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1941&aparameters=aid_nast:129
+### 000001341
+## 000001342
+RewriteRule ^smlouva-o-dilo$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2081&aparameters=aid_nast:129
+### 000001342
+## 000001361
+RewriteRule ^volby-demokracie-politicke-svobody$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2101&aparameters=aid_nast:129
+### 000001361
+## 000000134
+RewriteRule ^222-otazek-a-odpovedi-k-najemnimu-bydleni$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:21&aparameters=aid_nast:129
+### 000000134
+## 000003241
+RewriteRule ^zakon-o-obetech-trestnych-cinu$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5001&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003241
+## 000001362
+RewriteRule ^prinicpy-zasady-v-pravu-teorie-praxe$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1981&aparameters=aid_nast:129
+### 000001362
+## 000003383
+RewriteRule ^uz-949-pracovnepravni-predpisy$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5037&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003383
+## 000003381
+RewriteRule ^uz-952-obce-kraje-hlavniho-mesta-prahy$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5101&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003381
+## 000000139
+RewriteRule ^legal-english$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:182&aparameters=aid_nast:129
+### 000000139
+## 000000140
+RewriteRule ^zakon-o-predchazeni-ekologicke-ujme-a-o-jeji-naprave-s-komentarem$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:201&aparameters=aid_nast:129
+### 000000140
+## 000000141
+RewriteRule ^silnicni-pravo$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:361&aparameters=aid_nast:129
+### 000000141
+## 000000142
+RewriteRule ^soustava-verejnych-rozpoctu$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:363&aparameters=aid_nast:129
+### 000000142
+## 000000143
+RewriteRule ^le-fransais-juridique$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:401&aparameters=aid_nast:129
+### 000000143
+## 000003382
+RewriteRule ^uz-951-katastr-nemovitosti$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5102&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003382
+## 000003384
+RewriteRule ^uz-947-ustava-ceske-republiky$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5109&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003384
+## 000000147
+RewriteRule ^rozhodnuti-ve-vecech-trestnich$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4&aparameters=aid_nast:129
+### 000000147
+## 000000148
+RewriteRule ^sluzebni-pomer-statnich-zamestnancu$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:104&aparameters=aid_nast:129
+### 000000148
+## 000000201
+RewriteRule ^ustava-ceske-republiky-v-praxi$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:581&aparameters=aid_nast:129
+### 000000201
+## 000000221
+RewriteRule ^dorucovani-v-civilnim-soudnim-rizeni$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:661&aparameters=aid_nast:129
+### 000000221
+## 000000241
+RewriteRule ^o-novem-trestnim-zakoniku$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:681&aparameters=aid_nast:129
+### 000000241
+## 000000301
+RewriteRule ^pocta-milanu-bakesovi$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:821&aparameters=aid_nast:129
+### 000000301
+## 000000643
+RewriteRule ^fenomen-judikatury-v-pravu$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1243&aparameters=aid_nast:129
+### 000000643
+## 000000161
+RewriteRule ^postupy-uctovani-podle-ifrs$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:521&aparameters=aid_nast:129
+### 000000161
+## 000003385
+RewriteRule ^uz-946-rozpocet-a-financovani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5108&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003385
+## 000000501
+RewriteRule ^uz-740-osr-srs$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1125&aparameters=aid_nast:129
+### 000000501
+## 000000521
+RewriteRule ^zakon-o-statnim-zastupitelstvi$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1141&aparameters=aid_nast:129
+### 000000521
+## 000003386
+RewriteRule ^uz-943-danovy-rad$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5034&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003386
+## 000003387
+RewriteRule ^uz-938-zakonik-prace-2013$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5031&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003387
+## 000001221
+RewriteRule ^mec-a-vahy$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1901&aparameters=aid_nast:129
+### 000001221
+## 000001423
+RewriteRule ^ustava-1920$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2322&aparameters=aid_nast:129
+### 000001423
+## 000000661
+RewriteRule ^spolecenstvi-vlastniku-jednotek$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1261&aparameters=aid_nast:129
+### 000000661
+## 000003388
+RewriteRule ^uz-924-prestupky-a-dalsi-spravni-delikty$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5107&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003388
+## 000001401
+RewriteRule ^kniha-cest$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2201&aparameters=aid_nast:129
+### 000001401
+## 000001422
+RewriteRule ^ustava-cr-vznik-vyvoj-a-perspektivy$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2321&aparameters=aid_nast:129
+### 000001422
+## 000000722
+RewriteRule ^vecna-bremena-s-verejnopravnim-prvkem$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1322&aparameters=aid_nast:129
+### 000000722
+## 000002241
+RewriteRule ^ustavni-pravo-a-statoveda-2-dil$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3121&aparameters=aid_nast:129
+### 000002241
+## 000002461
+RewriteRule ^pojem-osoby-v-pravu$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3441&aparameters=aid_nast:129
+### 000002461
+## 000001441
+RewriteRule ^zamestnanecke-benefity-v-roce-2011$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2362&aparameters=aid_nast:129
+### 000001441
+## 000002941
+RewriteRule ^vykonna-a-soudni-moc-v-demokratickem-pravnim-state$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4561&aparameters=aid_nast:129
+### 000002941
+## 000003441
+RewriteRule ^trestni-odpovednost-pravnickych-osob-v-ceske-republice-bilance-a-perspektivy$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5061&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003441
+## 000000781
+RewriteRule ^ceskoslovenska-a-ceska-zahranicni-politika$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1441&aparameters=aid_nast:129
+### 000000781
+## 000000741
+RewriteRule ^dejiny-ceskeho-a-ceskoslovenskeho-prava-do-r-1945$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1401&aparameters=aid_nast:129
+### 000000741
+## 000000861
+RewriteRule ^pravo-evropske-unie-v-judikature-ustavniho-soudu$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1561&aparameters=aid_nast:129
+### 000000861
+## 000000881
+RewriteRule ^priklady-a-judikatura-z-prava-zivotniho-prostredi$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1661&aparameters=aid_nast:129
+### 000000881
+## 000001001
+RewriteRule ^dejiny-evropskeho-kontinentalniho-prava$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1781&aparameters=aid_nast:129
+### 000001001
+## 000002602
+RewriteRule ^xx-karlovarske-pravnicke-dny-jubilejni-sbornik$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3962&aparameters=aid_nast:129
+### 000002602
+## 000001041
+RewriteRule ^sousedska-prava-5-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1821&aparameters=aid_nast:129
+### 000001041
+## 000002981
+RewriteRule ^spravni-rad$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4481&aparameters=aid_nast:129
+### 000002981
+## 000003323
+RewriteRule ^islamske-rodinne-pravo-se-zamerenim-na-pravo-manzelske$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5142&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003323
+## 000001601
+RewriteRule ^chrestomatie-ke-studiu-filosofie-prava$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2521&aparameters=aid_nast:129
+### 000001601
+## 000001261
+RewriteRule ^aktualni-otazky-financi-a-financniho-prava$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1881&aparameters=aid_nast:129
+### 000001261
+## 000003341
+RewriteRule ^ustavni-zaklady-organizace-statu$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5221&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003341
+## 000000681
+RewriteRule ^cestovani-se-zbrani-na-uzemi-nemecka-rakouska-svycarska-a-lichtenstejnska$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1281&aparameters=aid_nast:129
+### 000000681
+## 000001181
+RewriteRule ^alternativni-tresty-a-opatreni-v-nove-pravni-uprave$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1801&aparameters=aid_nast:129
+### 000001181
+## 000000801
+RewriteRule ^otazky-pravniho-procesu$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1481&aparameters=aid_nast:129
+### 000000801
+## 000000821
+RewriteRule ^vyjimecny-trest$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1521&aparameters=aid_nast:129
+### 000000821
+## 000000841
+RewriteRule ^svoboda-projevu-principy-meze-garance$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1541&aparameters=aid_nast:129
+### 000000841
+## 000000901
+RewriteRule ^pojistovaci-pravo$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1621&aparameters=aid_nast:129
+### 000000901
+## 000000961
+RewriteRule ^regulace-medii$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:1721&aparameters=aid_nast:129
+### 000000961
+## 000001461
+RewriteRule ^ustavni-system-ceske-republiky-a-polske-republiky-po-pristoupeni-k-eu$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2241&aparameters=aid_nast:129
+### 000001461
+## 000001301
+RewriteRule ^spravni-pravo-hmotne-obecna-cast$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2021&aparameters=aid_nast:129
+### 000001301
+## 000001501
+RewriteRule ^danovy-rad-s-komentarem-duvodovou-zpravou-a-judikaturou$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2401&aparameters=aid_nast:129
+### 000001501
+## 000001802
+RewriteRule ^20-let-obnovene-pravnicke-fakulty-olomoucke-univerzity$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2661&aparameters=aid_nast:129
+### 000001802
+## 000001943
+RewriteRule ^mezinarodni-pravo-verejne-s-kazuistikou-2-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2883&aparameters=aid_nast:129
+### 000001943
+## 000001662
+RewriteRule ^insolvencni-zakon$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2602&aparameters=aid_nast:129
+### 000001662
+## 000001901
+RewriteRule ^pravni-zmeny-najemniho-bydleni$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2841&aparameters=aid_nast:129
+### 000001901
+## 000001861
+RewriteRule ^dedicke-pravo-v-teorii-a-praxi$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2761&aparameters=aid_nast:129
+### 000001861
+## 000001981
+RewriteRule ^obhajce-v-trestnim-rizeni$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2921&aparameters=aid_nast:129
+### 000001981
+## 000001944
+RewriteRule ^dejiny-angloamerickeho-prava-2-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2884&aparameters=aid_nast:129
+### 000001944
+## 000002181
+RewriteRule ^film-z-hlediska-autorskeho-prava$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3061&aparameters=aid_nast:129
+### 000002181
+## 000002361
+RewriteRule ^uplatnovani-naroku-z-vecnych-prav-a-rozhodovani-o-nich-01$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3261&aparameters=aid_nast:129
+### 000002361
+## 000002041
+RewriteRule ^prezident-republiky$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3021&aparameters=aid_nast:129
+### 000002041
+## 000001921
+RewriteRule ^ucelove-pozemni-komunikace-a-jejich-pravni-ochrana$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2861&aparameters=aid_nast:129
+### 000001921
+## 000001941
+RewriteRule ^zakon-o-mistnim-referedu-s-komentarem-a-judikaturou$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2881&aparameters=aid_nast:129
+### 000001941
+## 000002001
+RewriteRule ^spravni-pravo-zvlastni-cast$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2942&aparameters=aid_nast:129
+### 000002001
+## 000002281
+RewriteRule ^zakon-o-rodine-09$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3241&aparameters=aid_nast:129
+### 000002281
+## 000001641
+RewriteRule ^zdravotnicka-praxe-a-pravo$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2561&aparameters=aid_nast:129
+### 000001641
+## 000001681
+RewriteRule ^spotrebitelsky-uver$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2641&aparameters=aid_nast:129
+### 000001681
+## 000002061
+RewriteRule ^praktikum-pava-evropske-unie-prvni-dil$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2961&aparameters=aid_nast:129
+### 000002061
+## 000002345
+RewriteRule ^zakon-o-prestupcich-02$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2964&aparameters=aid_nast:129
+### 000002345
+## 000002346
+RewriteRule ^zakon-o-silnicnim-provozu-02$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3161&aparameters=aid_nast:129
+### 000002346
+## 000001881
+RewriteRule ^geometricky-plan-2-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2821&aparameters=aid_nast:129
+### 000001881
+## 000002201
+RewriteRule ^pravni-radce-odsouzeneho$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2962&aparameters=aid_nast:129
+### 000002201
+## 000001821
+RewriteRule ^sbirka-klauzurnich-praci-z-civilniho-prava-procesniho$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:2721&aparameters=aid_nast:129
+### 000001821
+## 000002021
+RewriteRule ^rodina-a-vyzivne-vyzivovaci-povinnost-mezi-manzely-a-ostatnimi-pribuznymi$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3001&aparameters=aid_nast:129
+### 000002021
+## 000002381
+RewriteRule ^stavebni-pravo-v-teorii-a-praxi$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3321&aparameters=aid_nast:129
+### 000002381
+## 000003301
+RewriteRule ^restituce-majektu-byvalych-slechtickych-rodu-po-roce-1989$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5081&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003301
+## 000003021
+RewriteRule ^poskozeny-a-obet-trestneho-cinu$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4381&aparameters=aid_nast:129
+### 000003021
+## 000003361
+RewriteRule ^praktikum-z-rimskeho-prava-2-rozsirene-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5241&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003361
+## 000003121
+RewriteRule ^podnikove-pravo$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4742&aparameters=aid_nast:129
+### 000003121
+## 000002641
+RewriteRule ^ochrana-pred-necinnosti-verejne-spravy$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4022&aparameters=aid_nast:129 [NC,QSA,L]
+### 000002641
+## 000003101
+RewriteRule ^ochrana-spotrebitele-v-ceske-republice-a-evropske-unii$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4721&aparameters=aid_nast:129
+### 000003101
+## 000002681
+RewriteRule ^smluvni-pokuta$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4121&aparameters=aid_nast:129
+### 000002681
+## 000003362
+RewriteRule ^uz-966-trestni-predpisy$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5201&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003362
+## 000002642
+RewriteRule ^deutsche-rechtssprache$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4023&aparameters=aid_nast:129
+### 000002642
+## 000002701
+RewriteRule ^aplikace-narodnich-procesnich-predpisu-v-kontextu-prava-evropske-unie$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4181&aparameters=aid_nast:129
+### 000002701
+## 000002781
+RewriteRule ^lisabonska-smlouva-a-jeji-dopady$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4321&aparameters=aid_nast:129
+### 000002781
+## 000002821
+RewriteRule ^dohoda-o-vine-a-trestu$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4361&aparameters=aid_nast:129
+### 000002821
+## 000002822
+RewriteRule ^vztah-lekare-a-pacienta-z-pohledu-soukromeho-prava$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4362&aparameters=aid_nast:129
+### 000002822
+## 000002861
+RewriteRule ^princip-prednosti-evropskeho-prava$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4141&aparameters=aid_nast:129
+### 000002861
+## 000002901
+RewriteRule ^e-government-v-ceske-republice$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4441&aparameters=aid_nast:129
+### 000002901
+## 000002921
+RewriteRule ^zaklad-dane-z-prijmu-a-dph-ve-vybranych-statech-eu-z-pohledu-danove-harmonizace$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4221&aparameters=aid_nast:129
+### 000002921
+## 000003161
+RewriteRule ^trestni-pravo-procesni-3-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4801&aparameters=aid_nast:129
+### 000003161
+## 000003162
+RewriteRule ^limity-prava$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4782&aparameters=aid_nast:129
+### 000003162
+## 000003181
+RewriteRule ^aktualni-otazky-spravniho-soudnictvi$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4841&aparameters=aid_nast:129
+### 000003181
+## 000003363
+RewriteRule ^uz-901-obcansky-zakonik-a-souvisejici-predpisy$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5039&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003363
+## 000003364
+RewriteRule ^uz-928-dane-z-prijmu-2013$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5163&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003364
+## 000003365
+RewriteRule ^uz-925-obchodni-zakonik-a-jine-zakony$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5024&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003365
+## 000003389
+RewriteRule ^uz-919-spravni-rad-soudni-rad-spravni$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5022&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003389
+## 000002584
+RewriteRule ^uz-901-zakon-o-obchodnich-korporacich-2014$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3843&aparameters=aid_nast:129 [NC,QSA,L]
+### 000002584
+## 000002583
+RewriteRule ^uz-900-novy-obcansky-zakonik-2014$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3842&aparameters=aid_nast:129 [NC,QSA,L]
+### 000002583
+## 000003402
+RewriteRule ^trestni-pravo-hmotne-3-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5262&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003402
+## 000003461
+RewriteRule ^exekucni-rad-a-zakon-kterym-se-stanovi-pravidla-pro-pripady-soubezne-probihajicich-vykonu-rozhodnuti-komentar-s-judikaturou$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5363&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003461
+## 000003561
+RewriteRule ^praktikum-prava-evropske-unie-1-dil-2-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5361&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003561
+## 000003644
+RewriteRule ^obcansky-zakonik-velky-komentar-svazek-1$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5441&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003644
+## 000002961
+RewriteRule ^jak-se-pise-o-soudech-a-soudcich-soudni-moc-v-mezioborove-pespektive$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4601&aparameters=aid_nast:129
+### 000002961
+## 000003061
+RewriteRule ^praktikum-z-prava-socialniho-zabezpeceni-3-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4641&aparameters=aid_nast:129
+### 000003061
+## 000003403
+RewriteRule ^priklady-z-trestniho-prava-hmotneho-a-procesniho-2-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5264&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003403
+## 000002421
+RewriteRule ^praktikum-prava-evropske-unie-druhy-dil$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3461&aparameters=aid_nast:129
+### 000002421
+## 000002521
+RewriteRule ^ochrana-osobnich-udaju$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3501&aparameters=aid_nast:129
+### 000002521
+## 000002661
+RewriteRule ^praktikum-civilniho-procesu-2-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4101&aparameters=aid_nast:129
+### 000002661
+## 000003001
+RewriteRule ^na-hranicich-prava-soudcovske-eseje$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4621&aparameters=aid_nast:129
+### 000003001
+## 000003401
+RewriteRule ^praktikum-z-obecneho-spravniho-prava-1-cast$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5261&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003401
+## 000003482
+RewriteRule ^slabikar-obecne-teorie-prava$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5381&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003482
+## 000003481
+RewriteRule ^trestni-zakonik-a-trestni-rad-s-poznamkami-a-judikaturou-4-aktualizovane-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5362&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003481
+## 000002301
+RewriteRule ^nahrada-skody$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3281&aparameters=aid_nast:129
+### 000002301
+## 000002441
+RewriteRule ^zakonik-prace-komentar-s-judikaturou$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3481&aparameters=aid_nast:129
+### 000002441
+## 000002522
+RewriteRule ^ochrana-vlastnickeho-prava-ve-prospech-ochrany-zivotniho-prostredi$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3442&aparameters=aid_nast:129
+### 000002522
+## 000002561
+RewriteRule ^spravni-pravo-procesni-4-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3681&aparameters=aid_nast:129
+### 000002561
+## 000002562
+RewriteRule ^zaklady-islamskeho-prava$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3682&aparameters=aid_nast:129
+### 000002562
+## 000002581
+RewriteRule ^uz-novy-obcansky-zakonik$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3844&aparameters=aid_nast:129
+### 000002581
+## 000002741
+RewriteRule ^zbrojni-prukaz-3-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4242&aparameters=aid_nast:129
+### 000002741
+## 000003201
+RewriteRule ^zakon-o-pozemnich-komunikacich-4-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4701&aparameters=aid_nast:129
+### 000003201
+## 000003202
+RewriteRule ^medialni-pravo-v-informacni-spolecnosti$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4901&aparameters=aid_nast:129
+### 000003202
+## 000003221
+RewriteRule ^media-a-trestni-rizeni$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4861&aparameters=aid_nast:129
+### 000003221
+## 000003222
+RewriteRule ^pravo-evropske-unie$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4921&aparameters=aid_nast:129
+### 000003222
+## 000002401
+RewriteRule ^mezinarodni-pojistne-pravo-se-zretelem-k-reseni-pojistnych-sporu-v-rozhodcim-rizeni$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3421&aparameters=aid_nast:129
+### 000002401
+## 000002462
+RewriteRule ^parlamenty-funkce-kultura-procedury$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3361&aparameters=aid_nast:129
+### 000002462
+## 000003541
+RewriteRule ^teorie-prava$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5341&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003541
+## 000002261
+RewriteRule ^socialni-prava$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3221&aparameters=aid_nast:129
+### 000002261
+## 000002541
+RewriteRule ^pravo-v-umeni-a-umeni-v-pravu$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:3561&aparameters=aid_nast:129
+### 000002541
+## 000002761
+RewriteRule ^princip-proporcionality$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4161&aparameters=aid_nast:129
+### 000002761
+## 000002881
+RewriteRule ^pravo-obchod-ekonomika-ii$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4421&aparameters=aid_nast:129
+### 000002881
+## 000002801
+RewriteRule ^obecni-samosprava$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4341&aparameters=aid_nast:129
+### 000002801
+## 000002841
+RewriteRule ^obcansky-zakonik-velky-komentar$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4401&aparameters=aid_nast:129
+### 000002841
+## 000003141
+RewriteRule ^zakon-o-trestni-odpovednosti-pravnickych-osob-2-vydani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4761&aparameters=aid_nast:129
+### 000003141
+## 000003261
+RewriteRule ^zakon-o-obchodnich-korporacich$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:4043&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003261
+## 000003366
+RewriteRule ^uz-906-zivnostenske-podnikani$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5162&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003366
+## 000003367
+RewriteRule ^uz-960-advokati-soudy-a-soudci-notari-znalci-a-tlumocnici$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5164&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003367
+## 000003368
+RewriteRule ^uz-902-prevodove-tabulky-a-rejstriky$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5021&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003368
+## 000003369
+RewriteRule ^uz-963-ochrana-spotrebitele$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5106&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003369
+## 000003370
+RewriteRule ^uz-961-zdravotni-sluzby$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5104&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003370
+## 000003371
+RewriteRule ^uz-958-poplatky$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5103&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003371
+## 000003372
+RewriteRule ^uz-953-stavebni-zakon-a-vyhlasky$     /leges-knihy/web_redir?aparameters=akod_r:zaznam_produktu&aparameters=id_produktu:5038&aparameters=aid_nast:129 [NC,QSA,L]
+### 000003372
+############## WEB_CLANKY ##############
+## 000000281
+RewriteRule ^vyhledavani-na-eshopu$     /leges-knihy/web_redir?aParameters=akod_r:ESHOP_VYHLEDAVANI
+### 000000281
+## 000000017
+RewriteRule ^predstaveni-edice-teoretik$     /leges-knihy/web_redir?aParameters=akod_r:EDICE_TEORETIK
+### 000000017
+## 000001141
+RewriteRule ^kontrola-struktury-webu$     /leges-knihy/web_redir?aParameters=akod_r:KONTROLA_STRUKTURY_WEBU
+### 000001141
+## 000000002
+RewriteRule ^menu$     /leges-knihy/web_redir?aParameters=akod_r:MENU
+### 000000002
+############## WEB_NASTAVENI_WEBU ##############
+## 000001108
+RewriteRule ^redakcni-rada$     /leges-knihy/web_redir?aParameters=aid_nast:84
+### 000001108
+## 000001109
+RewriteRule ^pro-autory$     /leges-knihy/web_redir?aParameters=aid_nast:85
+### 000001109
+## 000001110
+RewriteRule ^inzerce$     /leges-knihy/web_redir?aParameters=aid_nast:86
+### 000001110
+## 000001121
+RewriteRule ^knihkupectvi$     /leges-knihy/web_redir?aParameters=aid_nast:98
+### 000001121
+## 000001127
+RewriteRule ^leges-edice-student$     /leges-knihy/web_redir?aParameters=aid_nast:90
+### 000001127
+## 000001128
+RewriteRule ^leges-edice-teoretik$     /leges-knihy/web_redir?aParameters=aid_nast:92
+### 000001128
+## 000001129
+RewriteRule ^leges-edice-uz$     /leges-knihy/web_redir?aParameters=aid_nast:95
+### 000001129
+## 000001130
+RewriteRule ^leges-uz$     /leges-knihy/web_redir?aParameters=aid_nast:95
+### 000001130
+## 000001131
+RewriteRule ^leges-stojanky$     /leges-knihy/web_redir?aParameters=aid_nast:96
+### 000001131
+## 000003642
+RewriteRule ^obednani-dodaci-udaje$     /leges-knihy/web_redir?aParameters=aid_nast:585 [NC,QSA,L]
+### 000003642
+## 000001101
+RewriteRule ^pripravujeme$     /leges-knihy/web_redir?aParameters=aid_nast:82
+### 000001101
+## 000001081
+RewriteRule ^nakladatelstvi-leges$     /leges-knihy/web_redir?aParameters=aid_nast:61
+### 000001081
+## 000001107
+RewriteRule ^kontakt$     /leges-knihy/web_redir?aParameters=aid_nast:101
+### 000001107
+## 000001122
+RewriteRule ^slevy$     /leges-knihy/web_redir?aParameters=aid_nast:97
+### 000001122
+## 000001123
+RewriteRule ^leges-edice-komentator$     /leges-knihy/web_redir?aParameters=aid_nast:88
+### 000001123
+## 000001124
+RewriteRule ^leges-edice-glosator$     /leges-knihy/web_redir?aParameters=aid_nast:89
+### 000001124
+## 000001125
+RewriteRule ^leges-edice-extra$     /leges-knihy/web_redir?aParameters=aid_nast:94
+### 000001125
+## 000001126
+RewriteRule ^leges-edice-praktik$     /leges-knihy/web_redir?aParameters=aid_nast:91
+### 000001126
+## 000001133
+RewriteRule ^obchodni-podminky$     /leges-knihy/web_redir?aParameters=aid_nast:99
+### 000001133
+## 000001622
+RewriteRule ^podekovani-za-nakup$     /leges-knihy/web_redir?aParameters=aid_nast:126
+### 000001622
+## 000003042
+RewriteRule ^xml-export-google$     /leges-knihy/web_redir?aParameters=aid_nast:387
+### 000003042
+## 000003583
+RewriteRule ^new-payment-post$     /leges-knihy/web_redir?aParameters=aid_nast:521 [NC,QSA,L]
+### 000003583
+## 000003661
+RewriteRule ^registrace$     /leges-knihy/web_redir?aParameters=aid_nast:604 [NC,QSA,L]
+### 000003661
+## 000003621
+RewriteRule ^uspesne-objednani$     /leges-knihy/web_redir?aParameters=aid_nast:395 [NC,QSA,L]
+### 000003621
+## 000003662
+RewriteRule ^prihlaseni$     /leges-knihy/web_redir?aParameters=aid_nast:603 [NC,QSA,L]
+### 000003662
+## 000003641
+RewriteRule ^nakupni-kosik$     /leges-knihy/web_redir?aParameters=aid_nast:584 [NC,QSA,L]
+### 000003641
+## 000003643
+RewriteRule ^obednani-rekapitulace$     /leges-knihy/web_redir?aParameters=aid_nast:587 [NC,QSA,L]
+### 000003643
+## 000001103
+RewriteRule ^seznam-knih$     /leges-knihy/web_redir?aParameters=aid_nast:83
+### 000001103
+## 000001082
+RewriteRule ^novinky$     /leges-knihy/web_redir?aParameters=aid_nast:81
+### 000001082
+## 000003045
+RewriteRule ^xml-export-seznam$     /leges-knihy/web_redir?aParameters=aid_nast:385
+### 000003045
+## 000003044
+RewriteRule ^xml-export-heureka$     /leges-knihy/web_redir?aParameters=aid_nast:386
+### 000003044
+## 000001621
+RewriteRule ^potvrzeni-volby-dopravy-a-platby$     /leges-knihy/web_redir?aParameters=aid_nast:125
+### 000001621

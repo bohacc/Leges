@@ -1,0 +1,308 @@
+<div class="objednani">
+  <div class="dodaci_udaje">
+    <form name="objednat" action="web_redir" method="post">
+        <div class="kosik"><strong>Košík</strong></div>
+    
+        <div class="hlavicka">   
+          <div class="mnozstvi"><strong>Počet</strong></div>
+          <div class="nazev"><strong>Název</strong></div>
+          <div class="celkem"><strong>Celkem</strong></div>
+          <div class="celkem_s_dph"><strong>Celkem s DPH</strong></div>      
+          <div class="cleaner">&nbsp;</div>
+        </div>
+        <div class="oddelovac"><hr></div>    
+        <div class="polozka" ng-repeat="item in cart.items">
+            <div class="mnozstvi">{{item.quantity}} ks</div>
+            <div class="nazev">
+                <a href="{{item.redirect}}">{{item.name}}</a>
+            </div>
+            <div class="celkem">{{item.amount}}&nbsp;Kč</div>
+            <div class="celkem_s_dph">{{item.amount_vat}}&nbsp;Kč</div>
+            <div class="cleaner">&nbsp;</div>
+        </div>
+    
+        <div class="oddelovac"><hr></div>
+        <div class="cleaner">&nbsp;</div>
+        <div class="soucet">
+          <div class="nadpis">Celkem za košík:&nbsp;&nbsp;&nbsp;</div>
+          <div class="celkem"><strong>{{cart.sum_amount}}&nbsp;Kč</strong></div>
+          <div class="celkem_s_dph"><strong>{{cart.sum_amount_vat}}&nbsp;Kč</strong></div>
+          <div class="cleaner">&nbsp;</div>
+        </div>  
+        
+        <div>&nbsp;</div>
+        <div class="cleaner">&nbsp;</div>
+    
+        <div class="platce"><strong>Plátce</strong></div>
+    
+        <div style="float: left;">
+            <a href="javascript:void(0)" ng-show="!delivery.orderWithoutLogin" ng-click="editCustomers()" class="tlacitko_vyber_z_ciselniku" title="Upravit údaje plátce">Upravit údaje plátce</a>
+        </div>
+        <div class="cleaner">&nbsp;</div>
+    
+        <fieldset>
+            <legend>Fakturační údaje</legend>
+            <div style="display: block;">
+                <div class="radek">
+                    <div class="parametr">Název</div>
+                    <div class="hodnota">
+                        <input type="text" class="big" ng-model="delivery.company_billing">
+                    </div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>
+                <div class="radek">
+                    <div class="parametr">IČ</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" ng-model="delivery.ic">
+                    </div>
+                    <div class="parametr">DIČ</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" ng-model="delivery.dic">
+                    </div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>
+                <div class="radek">
+                    <div class="parametr">Jméno</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" ng-model="delivery.first_name_billing">
+                    </div>
+                    <div class="parametr">Příjmení</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" ng-model="delivery.last_name_billing">
+                    </div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>
+                <div class="radek">
+                    <div class="parametr">Ulice</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" ng-model="delivery.street_billing">
+                    </div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>
+                <div class="radek">
+                    <div class="parametr">Město</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" ng-model="delivery.city_billing">
+                    </div>
+                    <div class="parametr">Telefon</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" id="aphone" ng-model="delivery.phone">
+                    </div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>   
+                <div class="radek">
+                    <div  class="parametr">PSČ</div>
+                    <div class="hodnota">
+                        <input type="text" class="small" id="azip_billing" ng-model="delivery.zip_billing">
+                    </div>
+                    <div class="parametr">Email</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" id="aemail" ng-model="delivery.email">
+                    </div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>
+            </div>
+        </fieldset>
+    
+        <div>&nbsp;</div>
+    
+        <div style="float: left;width: 200px;">&nbsp;</div>
+        <div style="float: left;">
+            <input type="checkbox" ng-model="checkedDelivery" ng-click="saveDelivery()">Adresa pro dodání je stejná jako fakturační
+        </div>
+        <div class="cleaner">&nbsp;</div>
+    
+        <div ng-hide="checkedDelivery">
+            <div style="float: left;width: 200px;">
+                <strong>Příjemce</strong>
+            </div>
+            <div class="cleaner">&nbsp;</div>
+            <fieldset>
+                <legend>Kontaktní údaje</legend>
+                <div class="radek">
+                    <div class="parametr">Název</div>
+                    <div class="hodnota">
+                        <input type="text" class="big" disabled="disabled" value="{{delivery.company_billing}}">
+                    </div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>
+                <div class="radek">
+                    <div class="parametr">Adresát</div>
+                    <div class="hodnota">
+                        <input type="text" class="big" ng-model="delivery.company_delivery">
+                    </div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>
+                <div style="width: 480px; padding-left: 70px;">(Pro dodání na firmu nebo jiné jméno)</div>
+                <div>&nbsp;</div>
+                <div class="radek">
+                    <div class="parametr">Jméno</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" ng-model="delivery.first_name_delivery">
+                    </div>
+                    <div class="parametr">Příjmení</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" ng-model="delivery.last_name_delivery">
+                    </div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>
+                <div class="radek">
+                    <div class="parametr">Ulice</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" ng-model="delivery.street_delivery">
+                    </div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>
+                <div class="radek">
+                    <div class="parametr">Město</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" ng-model="delivery.city_delivery">
+                    </div>
+                    <div class="parametr">Telefon</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" disabled="disabled" value="{{delivery.phone}}">
+                    </div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>
+                <div class="radek">
+                    <div class="parametr">PSČ</div>
+                    <div class="hodnota">
+                        <input type="text" class="small" id="azip_delivery" ng-model="delivery.zip_delivery">
+                    </div>
+                    <div class="parametr">Email</div>
+                    <div class="hodnota">
+                        <input type="text" class="medium" disabled="disabled" value="{{delivery.email}}">
+                    </div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>
+                <div class="radek">                                      
+                    <div class="parametr">Stát</div>
+                    <div class="hodnota">
+                        <select name="aParameters" class="medium">
+                            <option value="CZ">Česká republika</option>
+                        </select>
+                    </div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>
+            </fieldset>
+        </div>
+    
+        <div class="cleaner">&nbsp;</div>
+        <div>&nbsp;</div>
+        <div class="cleaner">&nbsp;</div>
+    
+        <div style="float: left; width: 320px;">
+            <div><strong>Doprava</strong></div>
+            <div ng-repeat="item in delivery.transports">
+                <input type="checkbox" ng-model="item.selected" ng-checked="item.code==delivery.transport" ng-disabled="!item.edit||editTransport" ng-click="saveTransport($index)">{{item.name}}
+            </div>
+        </div>
+    
+        <div class="cleaner">&nbsp;</div>
+        <div>&nbsp;</div>
+    
+        <div style="float: left; width: 320px;">
+            <div><strong>Platba</strong></div>
+            <div ng-repeat="item in delivery.payments">
+                <input type="checkbox" ng-model="item.selected" ng-checked="item.code==delivery.payment" ng-disabled="!item.edit||editPayment" ng-click="savePayment($index)">{{item.name}}
+            </div>
+        </div>
+    
+        <div class="cleaner">&nbsp;</div>
+        <div class="cleaner">&nbsp;</div>
+        <div>&nbsp;</div>
+    
+        <fieldset ng-show="delivery.pay_trans_info">
+            <legend>Doprava a platba - info</legend>
+            <div style="width: 550px; height: 0px;">&nbsp;</div>
+            <div ng-show="delivery.transport_delivery!=''">
+                <div>Podrobnosti o dopravě:</div>
+                <div>{{delivery.transport_description}}</div>
+            </div>
+            <div ng-show="delivery.payment_description!=''">
+                <div>Podrobnosti o platbě:</div>
+                <div>{{delivery.payment_description}}</div>
+            </div>
+        </fieldset>
+    
+        <div>&nbsp;</div>
+    
+        <div>
+            <strong>Výsledná cena</strong>
+        </div>
+    
+        <fieldset>
+            <legend>Celkem</legend>
+            <div style="width: 550px; height: 0px;">&nbsp;</div>
+            <div>
+                <div style="float: left; width: 100px;">Zboží&nbsp;celkem:</div>
+                <div style="float: left; width: 350px;">&nbsp;</div>
+                <div style="float: left; text-align: right; width: 100px;">
+                    <strong>{{cart.sum_amount}}&nbsp;Kč</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+    
+            <div>
+                <div style="float: left; width: 100px;">Doprava&nbsp;a&nbsp;platba:</div>
+                <div style="float: left; width: 350px;">&nbsp;</div>
+                <div style="float: left; text-align: right; width: 100px;">
+                    <strong>{{delivery.amount_tp | currency}}</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+    
+            <div>
+                <div style="float: left; width: 100px;">Cena&nbsp;celkem:</div>
+                <div style="float: left; width: 350px;">&nbsp;</div>
+                <div style="float: left; text-align: right; width: 100px;">
+                    <strong>{{cart.sum_amount_tp}}&nbsp;Kč</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+    
+            <div>
+                <div style="float: left; width: 100px;">Cena&nbsp;celkem&nbsp;s&nbsp;DPH:</div>
+                <div style="float: left; width: 350px;">&nbsp;</div>
+                <div style="float: left; text-align: right; width: 100px;">
+                    <strong>{{cart.sum_amount_vat_tp}}&nbsp;Kč</strong>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+    
+        </fieldset>
+    
+        <div>&nbsp;</div>
+    
+        <fieldset>
+            <legend>Obchodní podmínky</legend>
+            <div style="width: 550px; height: 0px;">&nbsp;</div>
+            <div>
+                <div>
+                    Souhlasím s obchodními podmínkami &nbsp;
+                    <input type="checkbox" ng-model="delivery.checkedTermsAndConditions" ng-checked="delivery.checkedTermsAndConditions">
+                    &nbsp;
+                    <a href="obchodni-podminky" target="_blank">Obchodní podminky</a>
+                </div>
+                <div>&nbsp;</div>
+            </div>
+        </fieldset>
+    
+        <div>&nbsp;</div>
+    
+        <div class="akce">
+            <div class="zpet">
+                <a href="javascript:void(0)" id="zpet" title="Zpět" ng-click="goCart()">Zpět</a>
+            </div>
+            <div class="pokracovat">
+                <a href="javascript:void(0)" id="objednat" title="Pokračovat" ng-click="goRecapitulation()">Pokračovat</a>
+            </div>
+            <div class="cleaner">&nbsp;</div>
+        </div>
+    
+        <div>&nbsp;</div>
+        <div class="cleaner">&nbsp;</div>
+    
+    </form>
+  </div>  
+</div>

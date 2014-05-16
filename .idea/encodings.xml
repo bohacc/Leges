@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/scripts/controllers/main_controller.js" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/scripts/cs_pay.js" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/scripts/email_validation.js" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/scripts/global.js" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/scripts/objednani.js" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/scripts/phone_validation.js" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/scripts/zip_validation.js" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/tools/angularjs/angular-locale_cs-cz.js" charset="windows-1250" />
+  </component>
+</project>
+

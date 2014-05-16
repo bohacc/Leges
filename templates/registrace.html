@@ -1,0 +1,218 @@
+<form name="partneri_create" action="#" method="post">
+    <h1>{{registration_title}}</h1>
+
+    <div>
+        <div style="float: left;" ng-show="newRegistration">
+            <input type="radio" name="iscompany" ng-model="delivery.person" ng-value="true">
+            <a href="javascript:void(0)" ng-click="delivery.person=true">Osoba</a>
+            &nbsp;|&nbsp;
+            <input type="radio" name="iscompany" ng-model="delivery.person" ng-value="false">
+            <a href="javascript:void(0)" ng-click="delivery.person=false">Firma</a>
+        </div>
+        <div style="float: left; width: 430px; text-align: right;">
+            <span style="color: #ff0000;">*&nbsp;</span> povinné údaje
+        </div>
+    </div>
+
+    <div class="cleaner">&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <fieldset>
+        <legend>&nbsp; <b> Základní údaje partnera </b> &nbsp;</legend>
+
+        <div>
+            <div ng-show="!delivery.person">
+                <div style="float: left; width: 60px;">
+                    <span style="color: #ff0000;">*&nbsp;</span>Název
+                </div>
+                <div style="float: left;">
+                    <input class="text" type="text" size="55" ng-model="delivery.company_billing">
+                </div>
+                <div class="cleaner">&nbsp;</div>
+                <div style="float: left; width: 60px;">
+                    <span style="color: #ff0000;">*&nbsp;</span>IČ
+                </div>
+                <div style="float: left;">
+                    <input class="text" type="text" size="20" ng-model="delivery.ic">
+                </div>
+                <div style="float: left; width: 60px;">
+                    &nbsp;&nbsp;DIČ
+                </div>
+                <div style="float: left;">
+                    <input class="text" type="text" size="20" ng-model="delivery.dic">
+                </div>
+            </div>
+            <div class="cleaner">&nbsp;</div>
+            <div style="float: left; width: 60px;">
+                <span style="color: #ff0000;">*&nbsp;</span>Jméno
+            </div>
+            <div style="float: left;">
+                <input class="text" type="text" size="20" ng-model="delivery.first_name_billing">
+            </div>
+            <div style="float: left; width: 60px;">
+                <span style="color: #ff0000;">*&nbsp;</span>Příjmení
+            </div>
+            <div style="float: left;">
+                <input class="text" type="text" size="20" ng-model="delivery.last_name_billing">
+            </div>
+        </div>
+
+    </fieldset>
+
+    <div class="cleaner">&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <div>
+        <fieldset>
+            <legend>&nbsp; <b> Fakturační adresa </b> &nbsp;</legend>
+            <div style="float: left; width: 60px;">
+                <span style="color: #ff0000;">*&nbsp;</span>Ulice
+            </div>
+            <div style="float: left;">
+                <input class="text" type="text" size="55" ng-model="delivery.street_billing">
+            </div>
+            <div class="cleaner">&nbsp;</div>
+            <div style="float: left; width: 60px;">
+                <span style="color: #ff0000;">*&nbsp;</span>Město
+            </div>
+            <div style="float: left;">
+                <input class="text" type="text" size="55" ng-model="delivery.city_billing">
+            </div>
+            <div class="cleaner">&nbsp;</div>
+            <div style="float: left; width: 60px;">
+                <span style="color: #ff0000;">*&nbsp;</span>PSČ
+            </div>
+            <div style="float: left; width: 150px;">
+                <input class="text" type="text" size="5" ng-model="delivery.zip_billing" id="azip_billing">
+            </div>
+            <div style="float: left; width: 60px;">
+                <span style="color: #ff0000;">*&nbsp;</span>Stát
+            </div>
+            <div style="float: left;">
+                <select class="small" ng-model="delivery.state_billing">
+                    <option value="CZ" selected="selected">Česká republika</option>
+                </select>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="cleaner">&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <div>
+        Adresa pro doručení je stejná jako fakturační
+        <input type="checkbox" value="1" ng-model="checkedDelivery">
+    </div>
+
+    <div class="cleaner">&nbsp;</div>
+
+    <div ng-show="!checkedDelivery">
+        <fieldset>
+            <legend>&nbsp; <b> Adresa doručení </b> &nbsp;</legend>
+            <!--<div style="float: left; width: 60px;">
+                Adresát
+            </div>
+            <div style="float: left;">
+                <input class="text" type="text" size="55" ng-model="delivery.company_delivery">
+            </div>
+            <div class="cleaner">&nbsp;</div>-->
+            <div style="float: left; width: 60px;">
+                Ulice
+            </div>
+            <div style="float: left;">
+                <input class="text" type="text" size="55" ng-model="delivery.street_delivery">
+            </div>
+            <div class="cleaner">&nbsp;</div>
+            <div style="float: left; width: 60px;">
+                Město
+            </div>
+            <div style="float: left;">
+                <input class="text" type="text" size="55" ng-model="delivery.city_delivery">
+            </div>
+            <div class="cleaner">&nbsp;</div>
+            <div style="float: left; width: 60px;">
+                PSČ
+            </div>
+            <div style="float: left; width: 150px;">
+                <input class="text" type="text" size="5" ng-model="delivery.zip_delivery" id="azip_delivery">
+            </div>
+            <div style="float: left; width: 60px;">
+                Stát
+            </div>
+            <div style="float: left;">
+                <select class="small" ng-model="delivery.state_delivery">
+                    <option value="CZ" selected="selected">Česká republika</option>
+                </select>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="cleaner">&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <div>
+        <fieldset>
+            <legend>&nbsp; <b> Kontaktní údaje </b> &nbsp;</legend>
+            <div style="float: left; width: 60px;">
+                <span style="color: #ff0000;">*&nbsp;</span>E-mail
+            </div>
+            <div style="float: left;">
+                <input class="text" type="text" size="44" ng-model="delivery.email" id="aemail">
+            </div>
+            <div class="cleaner">&nbsp;</div>
+            <div style="float: left; width: 60px;">
+                <span style="color: #ff0000;">*&nbsp;</span>Telefon
+            </div>
+            <div style="float: left;">
+                <input class="text" type="text" size="44" ng-model="delivery.phone" id="aphone">
+            </div>
+            <div class="cleaner">&nbsp;</div>
+            <div style="float: left; width: 60px;">
+                &nbsp;&nbsp;&nbsp;Fax
+            </div>
+            <div style="float: left;">
+                <input class="text" type="text" size="44" ng-model="delivery.fax">
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="cleaner">&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <div>
+        <fieldset>
+            <legend>&nbsp; <b> Přihlašovací údaje </b> &nbsp;</legend>
+            <div style="float: left; width: 120px;">
+                <span style="color: #ff0000;">*&nbsp;</span>Přihlašovací jméno
+            </div>
+            <div style="float: left;">
+                <input class="text" type="text" size="44" ng-disabled="!newRegistration" ng-model="delivery.login_name">
+            </div>
+            <div class="cleaner">&nbsp;</div>
+            <div ng-show="newRegistration">
+                <div style="float: left; width: 120px;">
+                    <span style="color: #ff0000;">*&nbsp;</span>Heslo
+                </div>
+                <div style="float: left;">
+                    <input class="text" type="password" size="44" ng-model="delivery.password">
+                </div>
+                <div class="cleaner">&nbsp;</div>
+                <div style="float: left; width: 120px;">
+                    <span style="color: #ff0000;">*&nbsp;</span>Heslo pro ověření
+                </div>
+                <div style="float: left;">
+                    <input class="text" type="password" size="44" ng-model="delivery.password_verify">
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="cleaner">&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <div style="display: block;">
+        <input type="button" value="OK" ng-disabled="verifyOK" ng-click="send()">
+    </div>
+
+    <div class="cleaner">&nbsp;</div>
+</form>

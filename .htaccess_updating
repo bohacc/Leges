@@ -1,0 +1,68 @@
+##  kazdy zaznam musi zacinat ##+mezera+id a koncit ###+mezera+id
+
+############## RUCNI_ZAZNAMY ##############
+## 000001521
+RewriteCond %{REQUEST_URI} !/errordocs/.*     
+### 000001521
+## 000001522
+RewriteRule ^ /errordocs/error_maintainance.php [L]     
+### 000001522
+## 000001731
+ErrorDocument 501     /errordocs/error_501.html
+### 000001731
+## 000001730
+ErrorDocument 500     /errordocs/error_500.html
+### 000001730
+## 000001729
+ErrorDocument 415     /errordocs/error_415.html
+### 000001729
+## 000001728
+ErrorDocument 414     /errordocs/error_414.html
+### 000001728
+## 000001727
+ErrorDocument 413     /errordocs/error_413.html
+### 000001727
+## 000001726
+ErrorDocument 412     /errordocs/error_412.html
+### 000001726
+## 000001725
+ErrorDocument 411     /errordocs/error_411.html
+### 000001725
+## 000001734
+ErrorDocument 506     /errordocs/error_506.html
+### 000001734
+## 000001723
+ErrorDocument 408     /errordocs/error_408.html
+### 000001723
+## 000001722
+ErrorDocument 406     /errordocs/error_406.html
+### 000001722
+## 000001721
+ErrorDocument 405     /errordocs/error_405.html
+### 000001721
+## 000001720
+ErrorDocument 404     /errordocs/error_404.html
+### 000001720
+## 000001719
+ErrorDocument 403     /errordocs/error_403.html
+### 000001719
+## 000001718
+ErrorDocument 401     /errordocs/error_401.html
+### 000001718
+## 000001717
+ErrorDocument 400     /errordocs/error_400.html
+### 000001717
+## 000001732
+ErrorDocument 502     /errordocs/error_502.html
+### 000001732
+## 000001733
+ErrorDocument 503     /errordocs/error_503.html
+### 000001733
+## 000001724
+ErrorDocument 410     /errordocs/error_410.html
+### 000001724
+
+############## RUCNI_ZAZNAMY_PREPINACE  ##############
+## 000000005
+RewriteEngine on     
+### 000000005

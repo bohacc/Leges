@@ -1,0 +1,44 @@
+<div id="obsah" style="width: 550px; padding:10px;">
+    <div>
+        Pro vytvoření objednávky na našem eshopu se prosím <strong>přihlaste</strong> ...
+    </div>
+    <div style="width: 100%;">
+        &nbsp;
+    </div>
+    <div id="registrovat" style="width: 100%; background-color: #FFF5E9; padding: 10px;">
+        <div>
+            <h3>
+                Noví uživatelé - registrace
+            </h3>
+            <h4 style="text-align:center;">
+                <a href="javascript:void(0)" ng-click="showRegistration()"><span style="text-decoration: underline; font-size: x-large;">Zaregistrovat se jako nový uživatel</span></a>
+            </h4>
+            <p>
+                Po registraci můžete využívat všech funkcí našeho serveru a získat slevu na objednané zboží...
+            </p>
+        </div>
+    </div>
+    <div style="width: 100%;">
+        &nbsp;
+    </div>
+    <div id="prihlasit" style="width: 100%; background-color: #FFF5E9; padding: 10px;">
+        <div>
+            <h3>
+                Existující uživatelé - přihlášení
+            </h3>
+        </div>
+        <form name="prihlaseni" method="post" action="#" id="prihlaseni">
+            <div style="text-align:center;">
+                Jméno <input style="width: 120px;" type="text" ng-model="login_name">
+                Heslo <input style="width: 120px;" type="password" ng-model="login_password" ng-keypress="if($event.keyCode=='13'&&login_name==''||login_password==''){login()}">
+                <input type="button" class="tlacitko_prihlasit" value="přihlásit" ng-disabled="login_name==''||login_password==''" ng-click="login()">
+            </div>
+        </form>
+    </div>
+    <div style="width: 100%;">
+        &nbsp;
+    </div>
+    <div id="pomoc" style="width: 100%; background-color: #FFF5E9; padding: 10px;">
+        Nevíte si rady? Zavolejte nám na <strong>222 356 400</strong> nebo napište na <strong>chci (zavináč) leges.cz</strong>
+    </div>
+</div>
